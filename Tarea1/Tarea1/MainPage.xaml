@@ -1,0 +1,57 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Tarea1.MainPage">
+
+    <StackLayout BackgroundColor="#EDEDED">
+        <Frame BackgroundColor="#EDEDED" Padding="20" CornerRadius="0">
+            <Label Text="Calculadora en Xamarin" HorizontalTextAlignment="Center" TextColor="#1F1F1F" FontSize="36"/>
+        </Frame>
+        <Label Text="Operaciones" FontSize="20" BackgroundColor="#EDEDED" TextColor="#1F1F1F" HorizontalOptions="Center" FontAttributes="Bold"/>
+        <Label Text="AJAR" FontSize="10" BackgroundColor="#EDEDED" TextColor="#1F1F1F" HorizontalOptions="Start" FontAttributes="Bold"/>
+        <StackLayout Orientation="Horizontal" HorizontalOptions="CenterAndExpand" BackgroundColor="#EDEDED" Padding="2">
+            <Button Text="Suma" Clicked="operacionesSRMD" FontSize="15" FontAttributes="Bold" TextColor="#EDEDED" CornerRadius="20" BackgroundColor="#1F1F1F"></Button>
+            <Button Text="Resta" Clicked="operacionesSRMD" FontSize="15" FontAttributes="Bold" TextColor="#EDEDED" CornerRadius="20" BackgroundColor="#1F1F1F"></Button>
+            <Button Text="Multiplicación" Clicked="operacionesSRMD" FontSize="15" FontAttributes="Bold" TextColor="#EDEDED" CornerRadius="20" BackgroundColor="#1F1F1F"></Button>
+            <Button Text="División" Clicked="operacionesSRMD" FontSize="15" FontAttributes="Bold" TextColor="#EDEDED" CornerRadius="20" BackgroundColor="#1F1F1F"></Button>
+        </StackLayout>
+        <StackLayout x:Name="IngresoNumeros" IsVisible="False"  BackgroundColor="#D9D9D9">
+            <Label Text="Numero 1" FontSize="15" TextColor="#1F1F1F" HorizontalOptions="Center" FontAttributes="Bold"/>
+            <Entry x:Name="Numero1Entry" Placeholder="Ingrese el numero 1" Keyboard="Numeric" FontSize="15" PlaceholderColor="#4C4C4C" HorizontalOptions="Center" />
+
+            <Label Text="Numero 2" FontSize="15" TextColor="#1F1F1F" HorizontalOptions="Center" FontAttributes="Bold" />
+            <Entry x:Name="Numero2Entry" Placeholder="Ingrese el numero 2" Keyboard="Numeric" FontSize="15" PlaceholderColor="#4C4C4C" HorizontalOptions="Center"/>
+            <Button Text="Calcular" Clicked="btnCalcular" FontSize="15" FontAttributes="Bold" TextColor="#EDEDED" CornerRadius="20" BackgroundColor="#1F1F1F"></Button>
+        </StackLayout>
+        <Label x:Name="ResultadoLabel" FontSize="15" HorizontalOptions="Center"></Label>
+        <Label x:Name="Historial" FontSize="15"></Label>
+        <ListView x:Name="HostorialListView" HasUnevenRows="True" BackgroundColor="#4C4C4C">
+            <ListView.Header >
+                <StackLayout Orientation="Horizontal">
+                    <Label Text="Fecha" FontAttributes="Bold" HorizontalOptions="StartAndExpand"></Label>
+                    <Label Text="Operacion" FontAttributes="Bold" HorizontalOptions="CenterAndExpand"></Label>
+                    <Label Text="Numero1" FontAttributes="Bold" HorizontalOptions="CenterAndExpand"></Label>
+                    <Label Text="Numero2" FontAttributes="Bold" HorizontalOptions="CenterAndExpand"></Label>
+                    <Label Text="Resultado" FontAttributes="Bold" HorizontalOptions="CenterAndExpand"></Label>
+                    <Label Text="Eliminar" FontAttributes="Bold" HorizontalOptions="EndAndExpand"></Label>
+                </StackLayout>
+            </ListView.Header>
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <StackLayout Orientation="Horizontal">
+                            <Label Text="{Binding Fecha}" HorizontalOptions="StartAndExpand" ></Label>
+                            <Label Text="{Binding operacion}" HorizontalOptions="CenterAndExpand" ></Label>
+                            <Label Text="{Binding Numero1}" HorizontalOptions="CenterAndExpand"></Label>
+                            <Label Text="{Binding Numero2}" HorizontalOptions="CenterAndExpand"></Label>
+                            <Label Text="{Binding Resultado}" HorizontalOptions="CenterAndExpand"></Label>
+                            <Button Text="Eliminar" Clicked="btnEliminar" FontSize="15" FontAttributes="Bold" TextColor="#EDEDED" CornerRadius="20" BackgroundColor="#1F1F1F" HorizontalOptions="EndAndExpand" CommandParameter="{Binding .}"></Button>
+                        </StackLayout>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+
+    </StackLayout>
+
+</ContentPage>

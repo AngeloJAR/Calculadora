@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Tarea1.MainPageFlyout"
+             Title="Menu">
+    <ContentPage.Content>
+        <StackLayout Padding="10">
+            <!-- Header -->
+            <Frame>
+                <Label Text="Menu" TextColor="Black" FontSize="50" HorizontalOptions="Center"/>
+            </Frame>
+
+            <!-- Menu Buttons -->
+            <Button Text="Inicio"/>
+            <Button Text="Acerca de" />
+            <Button Text="Iniciar sesión" />
+            <ImageButton  Source="imgGen.jpg" Clicked="btnImagenes" Aspect="AspectFill" WidthRequest="40"/>
+            <Button Text="Calculadora" Clicked="btnCalculadora" />
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

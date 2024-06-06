@@ -88,13 +88,20 @@
     <AndroidResource Include="Resources\mipmap-xxxhdpi\launcher_foreground.png" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Resources\drawable\" />
+    <AndroidResource Include="Resources\drawable\imgCalavera.jpg" />
+    <AndroidResource Include="Resources\drawable\imgicon.jpg" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Tarea1\Tarea1.csproj">
       <Project>{96146ED7-AC87-47F3-A257-3BBCA0AD82B8}</Project>
       <Name>Tarea1</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\imgFantasma.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\imgGen.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
 </Project>

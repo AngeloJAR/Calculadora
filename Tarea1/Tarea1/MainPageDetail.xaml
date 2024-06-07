@@ -2,12 +2,29 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Tarea1.MainPageDetail"
-             Title="Detail">
+             Title="Inicio">
     <ContentPage.Content>
-        <StackLayout>
-            <Label Text="Welcome to the Main Page!"
-                   VerticalOptions="CenterAndExpand" 
-                   HorizontalOptions="CenterAndExpand" />
-        </StackLayout>
+        <Grid>
+            <!-- Fondo de pantalla -->
+            <Image Source="imgFondoPantallaArbol.jpg" Aspect="AspectFill"/>
+
+
+
+            <!-- Diseño superpuesto con el mensaje de bienvenida -->
+            <StackLayout VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand">
+                <Label Text="¡Bienvenido a mi aplicación!"
+                       FontSize="Large"
+                       FontAttributes="Bold"
+                       TextColor="White"
+                       HorizontalTextAlignment="Center"
+                       Margin="20"/>
+
+                <Label Text="Desarrollado por Angelo Andino"
+                       FontSize="Medium"
+                       TextColor="White"
+                       HorizontalTextAlignment="Center"
+                       Margin="20"/>
+            </StackLayout>
+        </Grid>
     </ContentPage.Content>
 </ContentPage>

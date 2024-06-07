@@ -11,11 +11,12 @@
             </Frame>
 
             <!-- Menu Buttons -->
-            <Button Text="Inicio"/>
+            <Button Text="Inicio" Clicked="btnInicio"/>
             <Button Text="Acerca de" />
-            <Button Text="Iniciar sesión" />
+            <Button Text="Iniciar sesión" Clicked="btnIniciosesion" />
             <ImageButton  Source="imgGen.jpg" Clicked="btnImagenes" Aspect="AspectFill" WidthRequest="40"/>
             <Button Text="Calculadora" Clicked="btnCalculadora" />
+            <Button Text="Ubicacion" Clicked="btnUbicacion" />
 
         </StackLayout>
     </ContentPage.Content>

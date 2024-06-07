@@ -53,6 +53,5 @@
                 </DataTemplate>
             </ListView.ItemTemplate>
         </ListView>
-        <Button Text="Layout" Clicked="btnLayout"></Button>
     </StackLayout>
 </ContentPage>

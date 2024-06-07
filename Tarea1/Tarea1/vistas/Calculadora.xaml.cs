@@ -123,10 +123,6 @@ namespace Tarea1.vistas
             //eliminar la operacion de la tabla
             operaciones.Remove(operacion);
         }
-        private async void btnLayout(object sender, EventArgs e)
-        {
-            await Navigation.PushAsync(new MainPage());
-        }
 
     }
 }

@@ -15,6 +15,7 @@
     <PackageReference Include="sqlite-net-pcl" Version="1.9.172" />
     <PackageReference Include="Xamarin.Forms" Version="5.0.0.2662" />
     <PackageReference Include="Xamarin.Essentials" Version="1.8.1" />
+    <PackageReference Include="Xamarin.Forms.GoogleMaps" Version="5.0.0" />
   </ItemGroup>
 
   <ItemGroup>
@@ -33,13 +34,16 @@
     <EmbeddedResource Update="vistas\Imagenes.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
+    <EmbeddedResource Update="vistas\InicioSesion.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="vistas\Ubicacion.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
   </ItemGroup>
 
   <ItemGroup>
     <None Update="Recursos\Imagenes\imgFantasma.png">
-      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
-    </None>
-    <None Update="Recursos\Imagenes\imgicon.jpg">
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </None>
   </ItemGroup>

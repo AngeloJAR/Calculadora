@@ -21,13 +21,18 @@ namespace Tarea1
         {
             InitializeComponent();
         }
-
-        //private async void OnInicioClicked(object sender, EventArgs e)
-        //{
-        //    var parent = (FlyoutPage)Parent;
-        //    parent.Detail = new NavigationPage(new vistas.Calculadora());
-        //    parent.IsPresented = false;
-        //}
+        private async void btnInicio(object sender, EventArgs e)
+        {
+            var parent = (FlyoutPage)Parent;
+            parent.Detail = new NavigationPage(new MainPageDetail());
+            parent.IsPresented = false;
+        }
+        private async void btnIniciosesion(object sender, EventArgs e)
+        {
+           var parent = (FlyoutPage)Parent;
+           parent.Detail = new NavigationPage(new vistas.InicioSesion());
+            parent.IsPresented = false;
+        }
 
         //private async void OnAcercaDeClicked(object sender, EventArgs e)
         //{
@@ -52,6 +57,12 @@ namespace Tarea1
         {
             var parent = (FlyoutPage)Parent;
             parent.Detail = new NavigationPage(new vistas.Calculadora());
+            parent.IsPresented = false;
+        }
+        private async void btnUbicacion(object sender, EventArgs e)
+        {
+            var parent = (FlyoutPage)Parent;
+            parent.Detail = new NavigationPage(new vistas.Ubicacion());
             parent.IsPresented = false;
         }
     }

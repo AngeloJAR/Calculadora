@@ -1,0 +1,55 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Tarea1.vistas.InicioSesion">
+    <StackLayout>
+        <Frame>
+            <Label Text="Inicio de sesión" FontSize="20" TextColor="#1F1F1F" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand" />
+        </Frame>
+            
+            <Label Text="Ingrese su cedula" ></Label>
+            <Entry x:Name="IdCedula" Text="Ingrese su cedula"></Entry>
+            <Label Text="Ingrese su nombre" ></Label>
+            <Entry x:Name="Nombre" Text="Ingrese su nombre"></Entry>
+        
+        <StackLayout Orientation="Horizontal">
+            <Image Source="imgAgregar.jpeg" WidthRequest="40" HeightRequest="40" VerticalOptions="Center" />
+            <Button Text="Añadir" Clicked="btnAñadir" FontSize="15" FontAttributes="Bold" TextColor="#EDEDED" CornerRadius="20" BackgroundColor="#1F1F1F" HorizontalOptions="FillAndExpand" />
+        </StackLayout>
+
+        <StackLayout Orientation="Horizontal">
+            <Image Source="imgEditar.jpeg" WidthRequest="40" HeightRequest="40" VerticalOptions="Center" />
+            <Button Text="Editar" Clicked="btnEditar" FontSize="15" FontAttributes="Bold" TextColor="#EDEDED" CornerRadius="20" BackgroundColor="#1F1F1F" HorizontalOptions="FillAndExpand" />
+        </StackLayout>
+
+        <StackLayout Orientation="Horizontal">
+            <Image Source="imgEliminar.jpeg" WidthRequest="40" HeightRequest="40" VerticalOptions="Center" />
+            <Button Text="Eliminar" Clicked="btnEliminar" FontSize="15" FontAttributes="Bold" TextColor="#EDEDED" CornerRadius="20" BackgroundColor="#1F1F1F" HorizontalOptions="FillAndExpand" />
+        </StackLayout>
+
+        <StackLayout Orientation="Horizontal">
+            <Image Source="imgMostrar.jpeg" WidthRequest="40" HeightRequest="40" VerticalOptions="Center" />
+            <Button Text="Mostrar" Clicked="btnMostrar" FontSize="15" FontAttributes="Bold" TextColor="#EDEDED" CornerRadius="20" BackgroundColor="#1F1F1F" HorizontalOptions="FillAndExpand" />
+        </StackLayout>
+
+        <ListView x:Name="UsuariosListView" IsVisible="False">
+            <ListView.Header>
+                <StackLayout Orientation="Horizontal" Padding="5" BackgroundColor="LightGray">
+                    <Label Text="Cedula" HorizontalOptions="StartAndExpand" />
+                    <Label Text="Nombre" HorizontalOptions="EndAndExpand" />
+                </StackLayout>
+            </ListView.Header>
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <StackLayout Orientation="Horizontal" Padding="5">
+                            <Label Text="{Binding IdCedula}" HorizontalOptions="StartAndExpand" />
+                            <Label Text="{Binding Nombre}" HorizontalOptions="EndAndExpand" />
+                        </StackLayout>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+        <WebView Source="file:///android_asset/icono.svg" />
+    </StackLayout>
+</ContentPage>

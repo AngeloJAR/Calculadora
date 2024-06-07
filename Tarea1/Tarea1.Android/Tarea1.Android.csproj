@@ -60,6 +60,9 @@
     </PackageReference>
     <PackageReference Include="Xamarin.Forms" Version="5.0.0.2662" />
     <PackageReference Include="Xamarin.Essentials" Version="1.8.1" />
+    <PackageReference Include="Xamarin.Forms.GoogleMaps">
+      <Version>5.0.0</Version>
+    </PackageReference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="MainActivity.cs" />
@@ -88,20 +91,33 @@
     <AndroidResource Include="Resources\mipmap-xxxhdpi\launcher_foreground.png" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\imgCalavera.jpg" />
-    <AndroidResource Include="Resources\drawable\imgicon.jpg" />
-  </ItemGroup>
-  <ItemGroup>
     <ProjectReference Include="..\Tarea1\Tarea1.csproj">
       <Project>{96146ED7-AC87-47F3-A257-3BBCA0AD82B8}</Project>
       <Name>Tarea1</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\imgFantasma.png" />
+    <AndroidResource Include="Resources\drawable\imgGen.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\imgGen.jpg" />
+    <AndroidResource Include="Resources\drawable\imgEditar.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\imgEliminar.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\imgMostrar.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\imgAgregar.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\imgFondoPantallaArbol.jpg" />
+    <AndroidResource Include="Resources\drawable\imgFondoPantallaEspacio.jpeg" />
+    <AndroidResource Include="Resources\drawable\imgFondoPatallaNubes.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\imgFondoPantallaMountain.jpeg" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
 </Project>

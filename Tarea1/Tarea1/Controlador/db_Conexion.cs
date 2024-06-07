@@ -17,6 +17,7 @@ namespace Tarea1.Controlador
         {
             _database = new SQLiteAsyncConnection(dbPath);
             _database.CreateTableAsync<Historial>().Wait();
+            _database.CreateTableAsync<Persona>().Wait();
         }
 
         // Métodos para la tabla Historial
@@ -33,6 +34,31 @@ namespace Tarea1.Controlador
         public Task<int> DeleteOperacionAsync(Historial operacion)
         {
             return _database.DeleteAsync(operacion);
+        }
+        //Metodos para la tabla Persona
+        public Task<List<Persona>> GetPersonasAsync()
+        {
+            return _database.Table<Persona>().ToListAsync();
+        }
+
+        public Task<Persona> GetPersonaAsync(string idCedula)
+        {
+            return _database.Table<Persona>().Where(i => i.IdCedula == idCedula).FirstOrDefaultAsync();
+        }
+
+        public Task<int> SavePersonaAsync(Persona persona)
+        {
+            return _database.InsertAsync(persona);
+        }
+
+        public Task<int> UpdatePersonaAsync(Persona persona)
+        {
+            return _database.UpdateAsync(persona);
+        }
+
+        public Task<int> DeletePersonaAsync(Persona persona)
+        {
+            return _database.DeleteAsync(persona);
         }
     }
 }
